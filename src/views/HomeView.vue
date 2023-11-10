@@ -11,9 +11,9 @@
         style="position: sticky; top: 0; background-color: white; z-index: 9999;"
       />
       <div class="mx-auto ">
-        <ul class="flex justify-center flex-col my-4 border-b-2 " v-for="(task, index) in tasks" :key="index">
+        <ul class="flex  flex-col my-4 border-b-2 " v-for="(task, index) in tasks" :key="index">
           <li class="flex justify-center mx-auto font-semibold my-4">
-            <input class=" fixed mr-60 md:mr-4 w-6 h-6 self-center" type="checkbox" @change="completeTask(index)" :checked="task.completed" />
+            <input class=" w-6 h-6 self-center absolute mr-36" type="checkbox" @change="completeTask(index)" :checked="task.completed" />
             <span class="mx-2 md:mx-4" :style="{ textDecoration: task.completed ? 'line-through' : 'none' }">
               {{ truncateText(task.baslik, 20) }}
             </span>
